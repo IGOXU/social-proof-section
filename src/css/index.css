@@ -10,6 +10,25 @@
   text-align: center;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "League Spartan", sans-serif;
+  font-size: 15px;
+}
+
+main {
+  padding: 24px;
+}
+
 .message {
   text-align: center;
 }
@@ -34,45 +53,69 @@
   margin-top: 3rem;
   text-align: center;
 }
-.stars__card {
+.stars .card__star {
   background-color: hsl(300deg, 24%, 96%);
   border-radius: 0.4rem;
   padding: 1rem;
 }
-.stars__list {
+.stars .card__list {
   align-items: center;
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin-bottom: 1rem;
 }
-.stars__list img {
+.stars .card__list img {
   height: 1.19rem;
   object-fit: contain;
 }
-.stars__rate {
+.stars .card__rate {
   color: hsl(300deg, 43%, 22%);
   font-size: 1.29rem;
   font-weight: 700;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.comments {
+  display: grid;
+  gap: 1rem;
+  grid-auto-flow: row;
+  margin-top: 3.27rem;
 }
-
-*::before, *::after {
-  box-sizing: border-box;
+.comments .card-comment {
+  background-color: hsl(300deg, 43%, 22%);
+  border-radius: 0.4rem;
+  color: hsl(0deg, 0%, 100%);
+  padding: 32px;
 }
-
-html {
-  font-family: "League Spartan", sans-serif;
-  font-size: 15px;
+.comments .card-comment__header {
+  align-items: center;
+  display: flex;
+  justify-content: start;
+  font-weight: 400;
+  gap: 22px;
+  margin-bottom: 2rem;
 }
-
-main {
-  padding: 24px;
+.comments .card-comment__header img {
+  border-radius: 50%;
+  height: 42px;
+  object-fit: contain;
+}
+.comments .card-comment__header-name h2, .comments .card-comment__header-name p {
+  font-size: 1.12rem;
+}
+.comments .card-comment__header-name p {
+  color: hsl(333deg, 80%, 67%);
+  padding-top: 0.2rem;
+}
+.comments .card-comment__body {
+  font-size: 1.1rem;
+  line-height: 1.36;
+}
+.comments .card-comment__body::before {
+  content: '" ';
+}
+.comments .card-comment__body::after {
+  content: ' "';
 }
 
 /*# sourceMappingURL=index.css.map */

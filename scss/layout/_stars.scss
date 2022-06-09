@@ -5,26 +5,29 @@
   margin-top: 3rem;
   text-align: center;
 
-  &__card{
-    background-color: $light-grayish-magenta;
-    border-radius: .4rem;
-    padding: 1rem;
-  }
-
-  &__list{
-    @include flex(center);
-    gap: 1rem;
-    margin-bottom: 1rem;
+  .card{
+    &__star{
+      background-color: $light-grayish-magenta;
+      border-radius: .4rem;
+      padding: 1rem;
+    }
     
-    img{
-      height: 1.19rem;
-      object-fit: contain;
+    &__list{
+      @include flex(center);
+      gap: 1rem;
+      margin-bottom: 1rem;
+      
+      img{
+        height: 1.19rem;
+        object-fit: contain;
+      }
+    }
+    
+    &__rate{
+      color: $very-dark-magenta;
+      font-size: 1.29rem;
+      font-weight: 700;
     }
   }
-  
-  &__rate{
-    color: $very-dark-magenta;
-    font-size: 1.29rem;
-    font-weight: 700;
-  }
+
 }

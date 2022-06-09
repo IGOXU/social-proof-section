@@ -2,8 +2,9 @@
 @import "./libs/mixins";
 @import "./libs/utils";
 
+@import "./layout/main";
 @import "./layout/message";
 @import "./layout/stars";
-@import "./layout/main";
+@import "./layout/comments";
 
 @import "./components/card";

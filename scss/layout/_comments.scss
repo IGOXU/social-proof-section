@@ -1,0 +1,46 @@
+.comments{
+  display: grid;
+  gap: 1rem;
+  grid-auto-flow: row;
+  margin-top: 3.27rem;
+
+  .card{
+    &-comment{
+      background-color: $very-dark-magenta;
+      border-radius: .4rem;
+      color: $white;
+      padding: 32px;
+      
+      &__header{
+        @include flex(start);
+        font-weight: 400;
+        gap: 22px;
+        margin-bottom: 2rem;
+        
+        img{
+          border-radius: 50%;
+          height: 42px;
+          object-fit: contain;
+        }
+        
+        &-name{
+          h2, p{
+            font-size: 1.12rem;
+          }
+          p{
+            color: $soft-pink;
+            padding-top: .2rem;
+          }
+        }
+      }
+
+      &__body{
+        font-size: 1.1rem;
+        line-height: 1.36;
+
+        &::before{ content: "\" "; }
+        &::after{ content: " \""; }
+      }
+    }
+  }
+}
