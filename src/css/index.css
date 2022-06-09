@@ -10,11 +10,10 @@
   text-align: center;
 }
 
-.header {
-  padding: 24px 24px 0;
+.message {
   text-align: center;
 }
-.header__title {
+.message__title {
   color: hsl(300deg, 43%, 22%);
   font-size: 3rem;
   font-weight: 700;
@@ -22,10 +21,39 @@
   margin-bottom: 24px;
   margin-top: 56px;
 }
-.header__message {
+.message__description {
   color: hsl(303deg, 10%, 53%);
   font-size: 1.19rem;
   line-height: 1.4;
+}
+
+.stars {
+  display: grid;
+  gap: 1.2rem;
+  grid-auto-flow: row;
+  margin-top: 3rem;
+  text-align: center;
+}
+.stars__card {
+  background-color: hsl(300deg, 24%, 96%);
+  border-radius: 0.4rem;
+  padding: 1rem;
+}
+.stars__list {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.stars__list img {
+  height: 1.19rem;
+  object-fit: contain;
+}
+.stars__rate {
+  color: hsl(300deg, 43%, 22%);
+  font-size: 1.29rem;
+  font-weight: 700;
 }
 
 * {
@@ -41,6 +69,10 @@
 html {
   font-family: "League Spartan", sans-serif;
   font-size: 15px;
+}
+
+main {
+  padding: 24px;
 }
 
 /*# sourceMappingURL=index.css.map */

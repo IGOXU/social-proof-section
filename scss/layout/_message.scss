@@ -1,5 +1,4 @@
-.header{
-  padding: 24px 24px 0;
+.message{
   text-align: center;
 
   &__title{
@@ -11,7 +10,7 @@
     margin-top: 56px;
   }
   
-  &__message{
+  &__description{
     color: $dark-grayish-magenta;
     font-size: 1.19rem;
     line-height: 1.4;
