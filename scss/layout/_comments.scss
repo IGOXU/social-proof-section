@@ -7,8 +7,10 @@
   
   @media (min-width: 1025px) {
     display: grid;
+    gap: 2rem;
     grid-auto-flow: column;
     height: 266px;
+    margin-top: 4rem;
   }
 
   .card{

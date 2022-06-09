@@ -13,11 +13,40 @@ html {
   font-size: 15px;
 }
 
+body {
+  background-image: url("../images/bg-pattern-top-mobile.svg");
+  background-position: top left -1rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
 @media (min-width: 1025px) {
   body {
+    background-image: url("../images/bg-pattern-top-desktop.svg");
+    background-size: auto;
     display: grid;
     min-height: 100vh;
     place-content: center;
+  }
+}
+body::after {
+  background-image: url("../images/bg-pattern-bottom-mobile.svg");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  bottom: 0;
+  content: "";
+  height: 34%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+@media (min-width: 1025px) {
+  body::after {
+    background-image: url("../images/bg-pattern-bottom-desktop.svg");
+    background-position: bottom -4rem right -3rem;
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 100%;
   }
 }
 
@@ -28,7 +57,7 @@ main {
   main {
     display: grid;
     grid-template-areas: "message stars" "comments comments";
-    grid-template-columns: 40% auto;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     max-height: 585px;
     max-width: 1110px;
@@ -43,7 +72,7 @@ main {
 @media (min-width: 1025px) {
   .message {
     flex-direction: column;
-    height: 243px;
+    padding-right: 5.6rem;
     text-align: left;
     align-items: center;
     display: flex;
@@ -60,8 +89,10 @@ main {
 }
 @media (min-width: 1025px) {
   .message__title {
-    font-size: 3.4rem;
+    font-size: 3.7rem;
+    letter-spacing: -2px;
     line-height: 0.9;
+    margin-top: 0;
   }
 }
 .message__description {
@@ -71,7 +102,7 @@ main {
 }
 @media (min-width: 1025px) {
   .message__description {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.2;
     padding-right: 1rem;
   }
@@ -84,12 +115,14 @@ main {
   grid-auto-flow: row;
   margin-top: 3rem;
   text-align: center;
+  z-index: 1;
 }
 @media (min-width: 1025px) {
   .stars {
     display: grid;
-    height: 243px;
+    gap: 0rem;
     margin-top: 0;
+    padding-top: 2rem;
   }
 }
 .stars .card__star {
@@ -104,6 +137,8 @@ main {
     display: grid;
     grid-auto-flow: column;
     height: 56px;
+    margin-left: 1rem;
+    padding: 1rem 0;
     width: 445px;
   }
   .stars .card__star:nth-child(2) {
@@ -122,17 +157,31 @@ main {
 }
 @media (min-width: 1025px) {
   .stars .card__list {
+    gap: 0;
     margin-bottom: 0;
+    text-align: left;
   }
 }
 .stars .card__list img {
   height: 1.19rem;
   object-fit: contain;
 }
+@media (min-width: 1025px) {
+  .stars .card__list img {
+    height: 1rem;
+    margin-left: 1rem;
+  }
+}
 .stars .card__rate {
   color: hsl(300deg, 43%, 22%);
   font-size: 1.29rem;
   font-weight: 700;
+}
+@media (min-width: 1025px) {
+  .stars .card__rate {
+    font-size: 1.1rem;
+    text-align: left;
+  }
 }
 
 .comments {
@@ -145,8 +194,10 @@ main {
 @media (min-width: 1025px) {
   .comments {
     display: grid;
+    gap: 2rem;
     grid-auto-flow: column;
     height: 266px;
+    margin-top: 4rem;
   }
 }
 .comments .card-comment {

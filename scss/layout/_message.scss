@@ -4,7 +4,7 @@
   
   @media (min-width: 1025px) {
     flex-direction: column;
-    height: 243px;
+    padding-right: 5.6rem;
     text-align: left;
     @include flex;
   }
@@ -19,8 +19,10 @@
     margin-top: 56px;
     
     @media (min-width: 1025px) {
-      font-size: 3.4rem;
+      font-size: 3.7rem;
+      letter-spacing: -2px;
       line-height: .9;
+      margin-top: 0;
     }
   }
   
@@ -30,7 +32,7 @@
     line-height: 1.4;
     
     @media (min-width: 1025px) {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       line-height: 1.2;
       padding-right: 1rem;
     }

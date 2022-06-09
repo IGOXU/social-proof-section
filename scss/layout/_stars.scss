@@ -5,11 +5,13 @@
   grid-auto-flow: row;
   margin-top: 3rem;
   text-align: center;
+  z-index: 1;
   
   @media (min-width: 1025px) {
     display: grid;
-    height: 243px;
+    gap: 0rem;
     margin-top: 0;
+    padding-top: 2rem;
   }
   
   .card{
@@ -18,14 +20,15 @@
       border-radius: .4rem;
       padding: 1rem;
       width: 100%;
-
+      
       @media (min-width: 1025px) {
         align-content: center;
         display: grid;
         grid-auto-flow: column;
         height: 56px;
+        margin-left: 1rem;
+        padding: 1rem 0;
         width: 445px;
-        
 
         &:nth-child(2){ justify-self: center; }
         &:nth-child(3){ justify-self: end; }
@@ -33,17 +36,24 @@
     }
     
     &__list{
-      @include flex(center);
+      @include flex;
       gap: 1rem;
       margin-bottom: 1rem;
       
       @media (min-width: 1025px) {
+        gap: 0;
         margin-bottom: 0;
+        text-align: left;
       }
       
       img{
         height: 1.19rem;
         object-fit: contain;
+
+        @media (min-width: 1025px) {
+          height: 1rem;
+          margin-left: 1rem;
+        }
       }
     }
     
@@ -51,6 +61,11 @@
       color: $very-dark-magenta;
       font-size: 1.29rem;
       font-weight: 700;
+
+      @media (min-width: 1025px) {
+        font-size: 1.1rem;
+        text-align: left;
+      }
     }
   }
 

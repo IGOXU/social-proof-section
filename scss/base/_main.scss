@@ -14,10 +14,40 @@ html{
 }
 
 body{
+  background-image: url("../images/bg-pattern-top-mobile.svg");
+  background-position: top left -1rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  
   @media (min-width: 1025px) {
+    background-image: url("../images/bg-pattern-top-desktop.svg");
+    background-size: auto;
+
     display: grid;
     min-height: 100vh;
     place-content: center;
+  }
+  
+  &::after{
+    background-image: url("../images/bg-pattern-bottom-mobile.svg");
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    bottom: 0;
+    content: "";
+    height: 34%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    
+    @media (min-width: 1025px) {
+      background-image: url("../images/bg-pattern-bottom-desktop.svg");
+      background-position: bottom -4rem right -3rem;
+      background-repeat: no-repeat;
+      background-size: auto;
+
+      height: 100%;
+    }
   }
 }
 
@@ -29,7 +59,7 @@ main{
     grid-template-areas: 
     "message stars"
     "comments comments";
-    grid-template-columns: 40% auto;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     max-height: 585px;
     max-width: 1110px;
