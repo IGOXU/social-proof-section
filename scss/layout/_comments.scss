@@ -1,8 +1,15 @@
 .comments{
   display: grid;
   gap: 1rem;
+  grid-area: comments;
   grid-auto-flow: row;
   margin-top: 3.27rem;
+  
+  @media (min-width: 1025px) {
+    display: grid;
+    grid-auto-flow: column;
+    height: 266px;
+  }
 
   .card{
     &-comment{
@@ -10,6 +17,13 @@
       border-radius: .4rem;
       color: $white;
       padding: 32px;
+
+      @media (min-width: 1025px) {
+        height: 234px;
+
+        &:nth-child(2){ align-self: center; }
+        &:nth-child(3){ align-self: end; }
+      }
       
       &__header{
         @include flex(start);
@@ -35,7 +49,7 @@
       }
 
       &__body{
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         line-height: 1.36;
 
         &::before{ content: "\" "; }

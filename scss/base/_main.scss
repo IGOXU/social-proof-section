@@ -1,0 +1,38 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::before, *::after{
+  box-sizing: border-box;
+}
+
+html{
+  font-family: $spartan; 
+  font-size: 15px;
+}
+
+body{
+  @media (min-width: 1025px) {
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+  }
+}
+
+main{
+  padding: 24px;
+  
+  @media (min-width: 1025px) {
+    display: grid;
+    grid-template-areas: 
+    "message stars"
+    "comments comments";
+    grid-template-columns: 40% auto;
+    grid-template-rows: 1fr 1fr;
+    max-height: 585px;
+    max-width: 1110px;
+    width: 100%;
+  }
+}

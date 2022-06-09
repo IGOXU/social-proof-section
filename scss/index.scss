@@ -1,10 +1,10 @@
 @import "./libs/variables";
 @import "./libs/mixins";
-@import "./libs/utils";
 
-@import "./layout/main";
+@import "./base/main";
+
 @import "./layout/message";
 @import "./layout/stars";
 @import "./layout/comments";
 
-@import "./components/card";
+@import "./layout/media";

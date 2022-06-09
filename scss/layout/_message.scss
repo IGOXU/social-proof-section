@@ -1,6 +1,15 @@
 .message{
+  grid-area: message;
   text-align: center;
-
+  
+  @media (min-width: 1025px) {
+    flex-direction: column;
+    height: 243px;
+    text-align: left;
+    @include flex;
+  }
+  
+  
   &__title{
     color: $very-dark-magenta;
     font-size: 3rem;
@@ -8,11 +17,22 @@
     line-height: .78;
     margin-bottom: 24px;
     margin-top: 56px;
+    
+    @media (min-width: 1025px) {
+      font-size: 3.4rem;
+      line-height: .9;
+    }
   }
   
   &__description{
     color: $dark-grayish-magenta;
     font-size: 1.19rem;
     line-height: 1.4;
+    
+    @media (min-width: 1025px) {
+      font-size: 1.1rem;
+      line-height: 1.2;
+      padding-right: 1rem;
+    }
   }
 }
