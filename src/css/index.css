@@ -1,0 +1,46 @@
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.header {
+  padding: 24px 24px 0;
+  text-align: center;
+}
+.header__title {
+  color: hsl(300deg, 43%, 22%);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 0.78;
+  margin-bottom: 24px;
+  margin-top: 56px;
+}
+.header__message {
+  color: hsl(303deg, 10%, 53%);
+  font-size: 1.19rem;
+  line-height: 1.4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "League Spartan", sans-serif;
+  font-size: 15px;
+}
+
+/*# sourceMappingURL=index.css.map */

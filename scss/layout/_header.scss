@@ -1,0 +1,19 @@
+.header{
+  padding: 24px 24px 0;
+  text-align: center;
+
+  &__title{
+    color: $very-dark-magenta;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: .78;
+    margin-bottom: 24px;
+    margin-top: 56px;
+  }
+  
+  &__message{
+    color: $dark-grayish-magenta;
+    font-size: 1.19rem;
+    line-height: 1.4;
+  }
+}
